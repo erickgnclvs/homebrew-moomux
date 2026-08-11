@@ -5,7 +5,7 @@
 class Moomux < Formula
   desc "A tmux session manager TUI"
   homepage "https://github.com/erickgnclvs/moomux"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Moomux < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.0/moomux_darwin_amd64.tar.gz"
-      sha256 "28feb0160b170b623c538e2e549c73c185afe6df0aad05532592b4a81fab471e"
+      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.1/moomux_darwin_amd64.tar.gz"
+      sha256 "b0542094403f3505e93022b5161cc2718dc4e595404b4cd5b056e8aa57425607"
 
       define_method(:install) do
         bin.install "moomux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.0/moomux_darwin_arm64.tar.gz"
-      sha256 "4a8322bc071ba3d7876520734c3cc13ed9353799188bd6a7d52b04b558ba32a2"
+      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.1/moomux_darwin_arm64.tar.gz"
+      sha256 "53cc5e6366e172c8c330dc23a8bb014e17728f2f4e4f19aba85e2f1a7acb6409"
 
       define_method(:install) do
         bin.install "moomux"
@@ -32,15 +32,15 @@ class Moomux < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.0/moomux_linux_amd64.tar.gz"
-      sha256 "76bbc2e8dc9468d68df9d55a49e16b01a69438728de5745b571ef35a86caa236"
+      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.1/moomux_linux_amd64.tar.gz"
+      sha256 "be5ec9d3459e04894d0ae01a0b9ec8d5f9e5a068b4660a8a634c6409d78d6274"
       define_method(:install) do
         bin.install "moomux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.0/moomux_linux_arm64.tar.gz"
-      sha256 "8b12c851a4ffb25d95e3c599499c22aaf08701d077aadcfb3a475c799b7d1ec4"
+      url "https://github.com/erickgnclvs/moomux/releases/download/v0.5.1/moomux_linux_arm64.tar.gz"
+      sha256 "46e05352674b314e08f2aa485da01c1bac94f50b138832a81e2fa8302ae04b4e"
       define_method(:install) do
         bin.install "moomux"
       end
